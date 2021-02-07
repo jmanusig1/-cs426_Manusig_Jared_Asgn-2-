@@ -5,6 +5,11 @@ using UnityEngine.Networking;
 
 public class PlayerMove : NetworkBehaviour
 {
+    //variables that control the speed and rotation speed 
+    public float speed = .1f;
+    public float rotationSpeed = .3f; 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +24,12 @@ public class PlayerMove : NetworkBehaviour
             return;
         }
 
-        var x = Input.GetAxis("Horizontal") * 0.1f;
-        var z = Input.GetAxis("Vertical") * 0.1f;
+        //variables for translation adn rotation 
+        var r = Input.GetAxis("Horizontal") * rotationSpeed;
+        var t = Input.GetAxis("Vertical") * speed;
 
-        transform.Translate(x, 0, z);
+        transform.Translate(0, 0, t);
+        transform.Rotate(0, r, 0);
     }
 
     public override void OnStartLocalPlayer()
