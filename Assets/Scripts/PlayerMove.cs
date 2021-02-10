@@ -48,10 +48,12 @@ public class PlayerMove : NetworkBehaviour
             }
         }
 
+        
         if (Input.GetKey(KeyCode.P))
         {
-            rb.AddForce(tran.up * 10f);
+            rb.AddForce(tran.up * 5f);
         }
+        
     }
 
     public override void OnStartLocalPlayer()

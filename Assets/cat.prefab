@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.06
-  rotationSpeed: 0.3
+  rotationSpeed: 0.4
   maxJump: 1
   force: 550
 --- !u!65 &1730960152799909923
